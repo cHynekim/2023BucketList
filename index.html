@@ -116,6 +116,20 @@
             <p class="emoji e6">💻</p>
         </div>
     </div>
+
+    <script>
+        let box = document.querySelectorAll('.bucket');
+        for(let i=0;i<box.length;i++){
+            box[i].onmouseover = function(){
+                console.log('!');
+                this.style.transform = 'scale(105%)';
+                this.style.transition = '0.3s';
+            };
+            box[i].onmouseout = function(){
+                this.style.transform = 'scale(100%)';
+            };
+        }
+    </script>
 </body>
 
 </html>
