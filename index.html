@@ -21,6 +21,16 @@
             font-size: 24px;
             padding: 6px 18px;
             border-radius: 8px;
+            position: relative;
+        }
+        .emoji{
+            margin: 0;
+            font-size: 30px;
+            position: absolute;
+        }
+        .title .emoji{
+            top: -20px;
+            left: -10px;
         }
         .msg {
             font-weight: bold;
@@ -28,6 +38,7 @@
         .bucket {
             width: 160px;
             height: 160px;
+            position: relative;
         }
         .img1 {
             background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
@@ -39,20 +50,71 @@
             background-size: cover;
             background-position: center;
         }
+        .e1{
+            top: 40px;
+            left: -10px;
+            transform: rotate(-10deg);
+        }
+        .e2{
+            font-size: 24px;
+            bottom: 28px;
+            /* left: 40px; */
+        }
+        .e3{
+            font-size: 22px;
+            top: 40px;
+            right: -7px;
+            transform: rotate(10deg);
+        }
+        .e4{
+            top: 9px;
+            right: -15px;
+        }
+        .e5{
+            bottom: 45px;
+            left: -10px;
+        }
+        .e6{
+            font-size: 22px;
+            bottom: 55px;
+            right: 25px;
+            transform: rotate(-10deg);
+        }
+        /*
+        깃허브 배포
+        add file - upload files - choose your files(upload my file) - commit changes
+        - bar/settings - left side, pages - branch, none to main - save
+        2-3minutes later, you will see the link of page that I uploaded
+        */
     </style>
     <link rel="stylesheet" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/sparta-bucket2.css">
 </head>
 
 <body class="bg center">
-    <h1 class="title">2023 신년계획</h1>
+    <h1 class="title">
+        2023 신년계획
+        <p class="emoji">🎉</p>
+    </h1>
     <p class="msg">올해도 의미있는 해를 보내보자!</p>
     <div class="row flex-row wrap">
-        <div class="bucket img1-t2 center">학점 4.0 따기</div>
-        <div class="bucket img2-t2 center">여름까지 내가 원하는 몸 만들기</div>
-        <div class="bucket img2-t2 center">좋아하는 책 한 권 만들기</div>
-        <div class="bucket img1-t2 center">IELTS overall 7.0 만들기</div>
-        <div class="bucket img1-t2 center">웹사이트 구현 완벽히 해보기</div>
-        <div class="bucket img2-t2 center">C언어 프로젝트 하나 해보기</div>
+        <div class="bucket img1-t2 center">학점 4.0 따기
+            <p class="emoji e1">📚</p>
+        </div>
+        <div class="bucket img2-t2 center">여름까지 내가 원하는 몸 만들기
+            <p class="emoji e2">🏃🏻‍♀️</p>
+        </div>
+        <div class="bucket img2-t2 center">좋아하는 책 한 권 만들기
+            <p class="emoji e3">📖</p>
+        </div>
+        <div class="bucket img1-t2 center">IELTS overall 7.0 만들기
+            <p class="emoji e4">🥇</p>
+        </div>
+        <div class="bucket img1-t2 center">웹사이트 구현 완벽히 해보기
+            <p class="emoji e5">👊🏻</p>
+        </div>
+        <div class="bucket img2-t2 center">C언어 프로젝트 하나 해보기
+            <p class="emoji e6">💻</p>
+        </div>
     </div>
 </body>
 
