@@ -82,6 +82,57 @@
             right: 25px;
             transform: rotate(-10deg);
         }
+        #modal{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .popwrap{
+            width: 250px;
+            height: 250px;
+            position: relative;
+        }
+        .pop a{
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .pop a:link{
+            color: cornflowerblue;
+        }
+        .pop a:hover{
+            color: lightslategray;
+        }
+        .pop a:visited{
+            color: darkblue;
+        }
+        .pop p{
+            margin: 0;
+            color: #222;
+        }
+        .pop{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: aliceblue;
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            line-height: 170%;
+            display: none;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .up{
+            display: block;
+        }
         /*
         깃허브 배포
         add file - upload files - choose your files(upload my file) - commit changes
@@ -118,18 +169,76 @@
             <p class="emoji e6">💻</p>
         </div>
     </div>
+    <div id="modal">
+        <div class="popwrap">
+            <div class="pop">
+                4.0 따지 않아도 좋으니<br>
+                시험기간 다가와서 하는 공부 말고<br>
+                평소에 꾸준히 할 수 있도록<br>
+                내 걸로 만들어보자.
+            </div>
+            <div class="pop">
+                등, 어깨 더 키우기!<br>
+                둔근도 잊지 말기<br>
+                그리고 잘 찌는 내 아랫배와 옆구리 ,,<br>
+                조절해서 먹고 유산소 잊지 말기<br>
+                주 2-3일은 꼭 운동 가기<br>
+                2023 여름엔 꼭 근육 뽐내며 다니기
+            </div>
+            <div class="pop">
+                넌 좀 책을 읽을 필요가<br>
+                있다고 느끼지 않니?<br>
+                올해는 꼭 흥미를 느끼게 해주는<br>
+                새로운 책을 찾아보자<br>
+                달려라 메로스도 다 읽으렴.
+            </div>
+            <div class="pop">
+                24년에 어학연수 가기 전에<br>
+                영어 공부를 하기 위한 수단으로<br>
+                고른 영어시험 이지만<br>
+                6.0은 성에 안 차니 열심히 해서<br>
+                23년 안으로 7.0까지 올려서<br>
+                나갈 수 있도록 하자! 화이팅.
+            </div>
+            <div class="pop">
+                전부터 꼭 해보고 싶었던,<br>
+                웹디기도 땄겠다<br>
+                내 디자인으로 만든 내 웹사이트<br>
+                꼭 23년 안으로 완성해보자!
+            </div>
+            <div class="pop">
+                <p>
+                    휴학기간 동안 공부하며 만든<br>
+                    <a href="https://blog.naver.com/liaco819/222961380777" target="_blank">행맨 예제</a>와 같은<br>
+                    간단한 미니 프로젝트 만들어보기<br>
+                    복학하면 시간 없다고 안 할테니<br>
+                    복학 전에 만들어보기
+                </p>
+            </div>
+        </div>
+    </div>
 
     <script>
         let box = document.querySelectorAll('.bucket');
+        let pop = document.querySelectorAll('.pop');
+        let modify;
         for(let i=0;i<box.length;i++){
             box[i].onmouseover = function(){
-                console.log('!');
                 this.style.transform = 'scale(105%)';
                 this.style.transition = '0.3s';
-            };
+            }
             box[i].onmouseout = function(){
                 this.style.transform = 'scale(100%)';
-            };
+            }
+            box[i].onclick = function(){
+                document.getElementById('modal').style.display = 'flex';
+                modify = pop[i];
+                pop[i].style.display = 'flex';
+            }
+        }
+        document.getElementById('modal').onclick = function(){
+            this.style.display = 'none';
+            modify.style.display = 'none'; 
         }
     </script>
 </body>
